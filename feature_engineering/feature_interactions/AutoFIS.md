@@ -1,15 +1,24 @@
-```latex
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+```html
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 ```
 
 AutoFIS: Automatic Feature Interaction Selection in Factorization Models for Click-Through Rate Prediction
 
 
 
-# # Proceduces: Two Stages
+# Proceduces: Two Stages
 
-# ## 0. Background
+## 0. Background
 
 <img src='images/autofis_background.jpg'>
 
