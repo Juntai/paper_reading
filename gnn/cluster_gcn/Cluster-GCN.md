@@ -1,5 +1,7 @@
 # Cluster-GCN
 
+Cluster-GCN: An Efficient Algorithm for Training Deep and Large Graph Convolutional Networks
+
 ## 1. 动机
 
 从2017年GCN被提出以来，GCN在许多基于图的应用里取得了成功。但由于原始的GCN在每次计算卷积时需要使用整个图的邻接矩阵和所有节点的特征，所以，在大规模的图上训练GCN很有挑战。基于SGD的算法也存在一些问题：一是计算复杂度会随着层数指数增长；二是有很高的空间复杂度（一些算法要存储所有节点的Embedding）。由于这些问题，在大规模图上训练GCN很有挑战，并且训练更深的模型也很有挑战。
@@ -88,7 +90,7 @@ $$X^{(l+1)} = \sigma((\tilde{A}+\lambda diag(\tilde{A}))X^{(l)}W^{(l)})$$
 
 ![](images/cluster_gcn_sota.png)
 
-在深度方面，作者构建了一个更大的数据集Amazon2m，重点与VRGCN做了对比：
+在网络深度方面，作者构建了一个更大的数据集Amazon2m，重点与VRGCN做了对比：
 
 ![](images/cluster_gcn_amazon2m.png)
 
