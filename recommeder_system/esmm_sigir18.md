@@ -31,7 +31,9 @@ $pCVR = p(conversion|click,impression)$
 
 ## 2.1 Modeling over entire space
 
-损失函数， 
+$\boldsymbol{x}$表示特征，$y$表示click的label，$z$表示conversion的label。
+
+损失函数如下：
 
 $L(\theta_{cvr}, \theta_{ctr}) = \sum_{i=1}^N l(y_i, \boldsymbol{x}_i ; \theta_{ctr})) + \sum_{i=1}^N l(y_i \& z_i), f(\boldsymbol{x}_i; \theta_{ctr}) \times f(\boldsymbol{x}_i; \theta_{cvr}))$
 
