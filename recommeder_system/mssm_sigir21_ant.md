@@ -62,7 +62,7 @@ $g_{ij}$是一个可学习的权重。
 
 得到task$j$的输出特征$u_j$，
 
-$u_j = E_j \bold{W}_j^E$
+$u_j = E_j \boldsymbol{W}_j^E$
 
 $w_{ij}$是通过relu来得到稀疏解的。
 
