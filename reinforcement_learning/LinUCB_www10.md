@@ -46,7 +46,7 @@ $\epsilon-$greedy 是最简单也是最好理解，最方便应用的利用与�
 
 Upper confidence bound是在$\epsilon-$greedy基础上一个更好的利用-探索机制。
 
-在每一次尝试$t$，既估算出每个arm的期望回报$\hat{\mu}_{t, a}，也估计一个相应的置信区间$c_{t, a}$，使得 $| \hat{\mu}_{t,a} - \mu_a| < c_{t, a}$以很大的概率成立。
+在每一次尝试$t$，既估算出每个arm的期望回报$\hat{\mu}_{t, a}$，也估计一个相应的置信区间$c_{t, a}$，使得 $| \hat{\mu}_{t,a} - \mu_a| < c_{t, a}$以很大的概率成立。
 
 在选择arm的时候，不再选择最大期望回报的arm，而是选择最大UCB(upper confidence bound)的arm。
 
