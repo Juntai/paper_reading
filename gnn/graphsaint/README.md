@@ -8,7 +8,7 @@ ICLR 2020论文《GraphSAINT: GRAPH SAMPLING BASED INDUCTIVE LEARNING METHOD》
 
 目前的大部分图神经网络模型主要集中在解决相对较小的图上浅层模型，如GraphSAGE、VRGCN、ASGCN、FastGCN等。在大图上训练深度模型仍然需要更快的方法。
 
-影响图神经网络训练的更深的一个主要问题是”邻居爆炸"问题。GraphSAGE、VRGCN、DiffPool需要限制邻居采样数量到很小的水平；FastGCN和ASGCN进一步把邻居膨胀系数限制到了1，但同时也遇到了规模化、精度和计算复杂度方面的挑战。
+影响图神经网络训练的更深的一个主要问题是”邻居爆炸"问题。GraphSAGE、VRGCN、PinSage需要限制邻居采样数量到很小的水平；FastGCN和ASGCN进一步把邻居膨胀系数限制到了1，但同时也遇到了规模化、精度和计算复杂度方面的挑战。
 
 ClusterGCN通过先对图进行聚类，然后在小图上进行图神经网络训练的方式，加速了训练过程，不会遇到“邻居爆炸”问题，但引入了偏差。
 
@@ -28,7 +28,7 @@ GraphSAINT的整体框架如下：
 
 $$\zeta^{(l+1)}_v = \sum_{v\in V}\frac{\tilde{A}_{v,u}}{\alpha_{u,v}}(W^{(l)})^T x_u^{(l)}1_{u|v}=\sum_{v\in V}\frac{\tilde{A}_{v,u}}{\alpha_{u,v}} \tilde{x}_u^{(l)}1_{u|v}$$
 
-其中，$1_{u|v}$表示在给定v的条件下，边(v,u)被抽到时为1，否则为0。
+其中，$1_{u|v}$表示在给定$v$的条件下，边$(v,u)$被抽到时为1，否则为0。
 
 作者证明了：
 
