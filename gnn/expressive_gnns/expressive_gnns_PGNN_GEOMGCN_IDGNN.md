@@ -1,10 +1,10 @@
 # 更强表达力的GNNs：P-GNNs、DEOM-GCN、ID-GNN
 
-根据(Xu et al., 2019)基于图消息传递架构的GNN的表达能力上限是1-WL图同构测试（1-Weisfeiler-Lehman graph isomorphism test），也就是说，在只是用图结构信息的情况下，这些GNNs不能区分开处于同构位置的两个节点。举个例子，如下图中的节点$v_1$和$v_2$有相同的局部邻居结构，GNN会把它们映射到Embedding空间中相同的点上。
+根据(Xu et al., 2019)基于图消息传递架构的GNN的表达能力上限是1-WL图同构测试（1-Weisfeiler-Lehman graph isomorphism test），也就是说，在只使用图结构信息的情况下，这些GNNs不能区分开处于同构位置的两个节点。举个例子，如下图中的节点$v_1$和$v_2$有相同的局部邻居结构，GNN会把它们映射到Embedding空间中相同的点上。
 
 ![](images/pgnn-1.png)
 
-下面是三篇与位置相关的GNN论文，分别从不同的角度解决这个问题。
+下面的三篇文章从不同的角度出发来增强GNN的表达能力。
 
 ## 1.P-GNNs：Position-aware Graph Neural Networks
 
@@ -40,7 +40,7 @@ P-GNNs的伪代码如下：
 
 几个关键点：
 
-**锚点集合的采样方法**：$S_{ij} \subset V, i=1,\cdots,\log n,j=1,\cdots,c\log n$. 抽样$S_{ij}$时，从$V$中对每个节点独立采样，概率为$\frac{1}{2^i}$。
+**锚点集合的采样方法**：$S_{ij} \subset V, i=1,\cdots,\log n,j=1,\cdots,c\log n$。抽样$S_{ij}$时，从$V$中对每个节点独立采样，概率为$\frac{1}{2^i}$。
 
 **基于距离的消息函数**：
 
