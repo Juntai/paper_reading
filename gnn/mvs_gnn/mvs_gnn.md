@@ -22,7 +22,7 @@ $g = \frac{1}{B}\sum_{i\in V_B}\nabla\phi(H_i^{(L)},y_i)$
 
 这个梯度是full batch梯度的无偏估计。但是计算该梯度需要使用每个节点的全部邻居。基于抽样的方法在每一层只抽样了节点的部分邻居节点，构建稀疏拉普拉斯矩阵得到embeding的估计$\tilde{H}^{(l)}$。
 
-#### 方差分解
+### 方差分解
 
 基于抽样的GNN可以看做是multi-level composite stochastic optimization problem：
 
